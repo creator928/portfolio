@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>[Index]</h1>
+    <hr>
+    <p>This is the first page of this server.</p>
+    <img src = "puppy.jpg" alt="test img" style="width:400px;height:300px;">
+    <p>test text... Hi it's just a test message</p>
+    <html lang="ko">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Kim의 소개 페이지</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f0f0f0;
+                    margin: 0;
+                    padding: 0;
+                }
+                .container {
+                    max-width: 600px;
+                    margin: 50px auto;
+                    padding: 20px;
+                    background-color: #ffffff;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                h1 {
+                    text-align: center;
+                    color: #333333;
+                }
+                p, ul {
+                    line-height: 1.6;
+                    color: #666666;
+                }
+                .skill-list, .hobby-list {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                .skill-list li, .hobby-list li {
+                    background: #4CAF50;
+                    color: white;
+                    margin: 5px 0;
+                    padding: 10px;
+                    border-radius: 4px;
+                    text-align: center;
+                }
+                .intro {
+                    margin-top: 20px;
+                    padding: 10px;
+                    background-color: #e0e0e0;
+                    border-left: 4px solid #4CAF50;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Kim의 소개 페이지</h1>
+                <p><strong>이름:</strong> Kim</p>
+                <p><strong>나이:</strong> 33</p>
+                <p><strong>학위:</strong> Master's degree</p>
+                <p><strong>주소:</strong> 부산시 해운대구</p>
+                <p><strong>좋아하는 것:</strong> 강아지</p>
+                <p><strong>취미:</strong></p>
+                <ul class="hobby-list">
+                    <li>독서</li>
+                    <li>등산</li>
+                </ul>
+                <p><strong>주요 기술:</strong></p>
+                <ul class="skill-list">
+                    <li>Python</li>
+                    <li>C#</li>
+                    <li>OpenCV</li>
+                </ul>
+                <div class="intro">
+                    <p>안녕하세요! 저는 Kim입니다. 저는 부산시 해운대구에 살고 있으며, Master's degree를 소지하고 있습니다. Python, C#, OpenCV와 같은 기술을 주로 사용하며, 강아지를 아주 좋아합니다. 취미로는 독서와 등산을 즐기고 있습니다. 저의 웹사이트에 방문해 주셔서 감사합니다!</p>
+                </div>
+            </div>
+        </body>
+    </html>
+    <html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보 게임</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>가위 바위 보 게임</h1>
+    <button onclick="play('가위')">가위</button>
+    <button onclick="play('바위')">바위</button>
+    <button onclick="play('보')">보</button>
+
+    <div id="result"></div>
+
+    <script>
+        function play(userChoice) {
+            const choices = ['가위', '바위', '보'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            let result = '';
+
+            if (userChoice === computerChoice) {
+                result = `무승부! 컴퓨터도 ${computerChoice}을(를) 냈습니다.`;
+            } else if (
+                (userChoice === '가위' && computerChoice === '보') ||
+                (userChoice === '바위' && computerChoice === '가위') ||
+                (userChoice === '보' && computerChoice === '바위')
+            ) {
+                result = `이겼습니다! 컴퓨터는 ${computerChoice}을(를) 냈습니다.`;
+            } else {
+                result = `졌습니다. 컴퓨터는 ${computerChoice}을(를) 냈습니다.`;
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
